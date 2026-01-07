@@ -1,0 +1,31 @@
+import { HeroSection } from "@/components/hero-section"
+import { SpecialtiesSection } from "@/components/specialties-section"
+import { ServicesSection } from "@/components/services-section"
+import { AboutSection } from "@/components/about-section"
+import { ValuesSection } from "@/components/values-section"
+import { WhyChooseSection } from "@/components/why-choose-section"
+import { CatalogSection } from "@/components/catalog-section"
+import { BlogSection } from "@/components/blog-section"
+import { ContactSection } from "@/components/contact-section"
+import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <HeroSection />
+        <SpecialtiesSection />
+        <ServicesSection />
+        <AboutSection />
+        <ValuesSection />
+        <WhyChooseSection />
+        <CatalogSection />
+        <BlogSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </div>
+  )
+}
