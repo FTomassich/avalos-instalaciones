@@ -20,31 +20,37 @@ export function HeroSection() {
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight px-2">
+          <h1 className="animate-fadeInUp text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight px-2" style={{ animationDelay: "0ms" }} >
             Instalamos confianza, construimos confort
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-5 font-medium text-pretty leading-relaxed px-2">
+
+          {/* Subtítulo */}
+          <p className="animate-fadeInUp text-lg sm:text-xl md:text-2xl text-white/95 mb-5 font-medium leading-relaxed px-2" style={{ animationDelay: "400ms" }} >
             Soluciones técnicas para obras que exigen cumplimiento y orden
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-white/85 mb-8 leading-relaxed max-w-3xl mx-auto px-2">
+
+          {/* Texto completo en desktop */}
+          <p className="animate-fadeInUp hidden sm:block text-base sm:text-lg md:text-xl text-white/85 mb-8 leading-relaxed max-w-3xl mx-auto px-2" style={{ animationDelay: "800ms" }} >
             Con más de 30 años de trayectoria, brindamos instalaciones seguras, eficientes y duraderas en agua, cloacas,
-            gas y calefacción. 
+            gas y calefacción. Atención personalizada, materiales certificados y ejecución profesional para que cada
+            proyecto sea seguro y confortable.
           </p>
+
+          {/* Texto abreviado en mobile */}
+          <p className="animate-fadeInUp block sm:hidden text-base text-white/85 mb-8 leading-relaxed max-w-3xl mx-auto px-2" style={{ animationDelay: "800ms" }} >
+            Con más de 30 años de trayectoria, brindamos instalaciones seguras, eficientes y duraderas en agua, cloacas,
+            gas y calefacción.
+          </p>
+
+          {/* Botones con animación individual */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4 mb-8">
             <Link href="#servicios">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6 w-full sm:w-auto"
-              >
+              <Button size="lg" className="animate-fadeInUp bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6 w-full sm:w-auto" style={{ animationDelay: "1200ms" }} >
                 Conocé nuestros servicios
               </Button>
             </Link>
             <Link href="#contacto">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-black transition-colors text-lg px-8 py-6 w-full sm:w-auto bg-transparent"
-              >
+              <Button size="lg" variant="outline" className="animate-fadeInUp border-2 border-white text-white hover:bg-white hover:text-black transition-colors text-lg px-8 py-6 w-full sm:w-auto bg-transparent" style={{ animationDelay: "1500ms" }} >
                 Pedí tu presupuesto
               </Button>
             </Link>
