@@ -21,6 +21,9 @@ export function Header() {
               height={85}
               className="h-14 sm:h-16 w-auto"
             />
+             <span className="text-xl sm:text-2xl font-bold text-gray-900">
+              Ávalos Instalaciones
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
