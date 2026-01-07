@@ -28,8 +28,7 @@ export function HeroSection() {
           </p>
           <p className="text-base sm:text-lg md:text-xl text-white/85 mb-8 leading-relaxed max-w-3xl mx-auto px-2">
             Con más de 30 años de trayectoria, brindamos instalaciones seguras, eficientes y duraderas en agua, cloacas,
-            gas y calefacción. Atención personalizada, materiales certificados y ejecución profesional para que cada
-            proyecto sea seguro y confortable.
+            gas y calefacción. 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4 mb-8">
             <Link href="#servicios">
