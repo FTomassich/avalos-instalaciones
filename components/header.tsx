@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 bg-white border-b border-border shadow-sm transition-all duration-300 ${
-        scrolled ? "h-20" : "h-28"
+        scrolled ? "h-22" : "h-24"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl h-full">
@@ -32,11 +32,9 @@ export function Header() {
               alt="Ávalos Instalaciones"
               width={240}
               height={85}
-              className={`transition-all duration-300 ${
-                scrolled ? "h-12" : "h-16 sm:h-20"
-              } w-auto`}
+              className={`transition-all duration-300 ${ scrolled ? "h-16" : "h-18 sm:h-20" } w-auto`}
             />
-            <div className="flex flex-col leading-tight">
+            <div className="flex flex-col items-center leading-tight">
               <span
                 className={`transition-all duration-300 font-bold text-gray-900 ${
                   scrolled ? "text-lg sm:text-xl" : "text-xl sm:text-2xl"
