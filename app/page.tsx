@@ -9,12 +9,14 @@ import { BlogSection } from "@/components/blog-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
+import { WhatsappButton } from "@/components/WhatsappButton"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
+        <WhatsappButton />
         <HeroSection />
         <SpecialtiesSection />
         <ServicesSection />

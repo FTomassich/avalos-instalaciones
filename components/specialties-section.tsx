@@ -1,3 +1,6 @@
+"use client"
+
+import Image from "next/image"
 import { Droplet, Flame, Thermometer } from "lucide-react"
 
 export function SpecialtiesSection() {
@@ -7,18 +10,24 @@ export function SpecialtiesSection() {
       title: "Agua y cloaca",
       description: "Redes completas con materiales certificados y mantenimiento profesional",
       details: "Cumplimiento normativo IRAM y garantía de funcionamiento",
+      image: "/images/agua.jpeg",
+      iconColor: "text-white", 
     },
     {
       icon: Flame,
       title: "Gas",
       description: "Instalaciones bajo normativa vigente con procesos eficientes",
       details: "Certificación NAG-200 y pruebas de estanqueidad",
+      image: "/images/gas.jpeg", 
+      iconColor: "text-white",
     },
     {
       icon: Thermometer,
       title: "Calefacción",
       description: "Radiadores y piso radiante para calor homogéneo y eficiente",
       details: "Diseño personalizado y máxima eficiencia energética",
+      image: "/images/calefaccion.jpeg", 
+      iconColor: "white",
     },
   ]
 
@@ -26,7 +35,7 @@ export function SpecialtiesSection() {
     <section id="especialidades" className="py-20 bg-muted/50 scroll-mt-24">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-5 text-balance leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">
             ¿En qué nos especializamos?
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
@@ -41,18 +50,28 @@ export function SpecialtiesSection() {
             return (
               <div
                 key={index}
-                className="bg-background p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/30 hover:-translate-y-1"
+                className="relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Icon className="w-8 h-8 text-primary" />
+                {/* Imagen de fondo */}
+                <Image
+                  src={specialty.image}
+                  alt={specialty.title}
+                  fill
+                  className="object-cover"
+                />
+                {/* Overlay con gradiente */}
+               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/40" />
+
+                {/* Contenido encima */}
+                <div className="relative z-10 p-8 flex flex-col items-center text-center text-white">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
+                   <Icon className="w-8 h-8 text-white" />
+
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{specialty.title}</h3>
+                  <p className="text-lg leading-relaxed mb-3">{specialty.description}</p>
+                  <p className="text-sm leading-relaxed italic">{specialty.details}</p>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-center">{specialty.title}</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed text-center mb-3">
-                  {specialty.description}
-                </p>
-                <p className="text-sm text-muted-foreground/70 leading-relaxed text-center italic">
-                  {specialty.details}
-                </p>
               </div>
             )
           })}

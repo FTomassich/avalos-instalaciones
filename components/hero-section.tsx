@@ -14,7 +14,8 @@ export function HeroSection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/75 to-black/65" />
+       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/50" />
+
       </div>
 
       {/* Content */}
