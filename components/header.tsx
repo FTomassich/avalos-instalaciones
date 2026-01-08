@@ -2,28 +2,56 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border shadow-sm">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex items-center justify-between h-20 sm:h-24">
-          <Link href="/" className="flex items-center flex-shrink-0">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 bg-white border-b border-border shadow-sm transition-all duration-300 ${
+        scrolled ? "h-20" : "h-28"
+      }`}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl h-full">
+        <div className="flex items-center justify-between h-full">
+          <Link href="/" className="flex items-center flex-shrink-0 gap-2">
             <Image
               src="/images/avalos-20instalaciones-01.jpg"
               alt="Ávalos Instalaciones"
               width={240}
               height={85}
-              className="h-14 sm:h-16 w-auto"
+              className={`transition-all duration-300 ${
+                scrolled ? "h-12" : "h-16 sm:h-20"
+              } w-auto`}
             />
-             <span className="text-xl sm:text-2xl font-bold text-gray-900">
-              Ávalos Instalaciones
-            </span>
+            <div className="flex flex-col leading-tight">
+              <span
+                className={`transition-all duration-300 font-bold text-gray-900 ${
+                  scrolled ? "text-lg sm:text-xl" : "text-xl sm:text-2xl"
+                }`}
+              >
+                Ávalos
+              </span>
+              <span
+                className={`transition-all duration-300 text-gray-700 ${
+                  scrolled ? "text-sm sm:text-base font-medium" : "text-base sm:text-lg font-normal"
+                }`}
+              >
+                Instalaciones
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -61,39 +89,19 @@ export function Header() {
           }`}
         >
           <nav className="py-4 space-y-4 border-t border-border">
-            <Link
-              href="#especialidades"
-              className="block text-base font-medium hover:text-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <Link href="#especialidades" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
               Especialidades
             </Link>
-            <Link
-              href="#servicios"
-              className="block text-base font-medium hover:text-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <Link href="#servicios" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
               Servicios
             </Link>
-            <Link
-              href="#nosotros"
-              className="block text-base font-medium hover:text-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <Link href="#nosotros" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
               Nosotros
             </Link>
-            <Link
-              href="#catalogo"
-              className="block text-base font-medium hover:text-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <Link href="#catalogo" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
               Catálogo
             </Link>
-            <Link
-              href="#blog"
-              className="block text-base font-medium hover:text-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <Link href="#blog" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
               Blog
             </Link>
             <Link href="#contacto" onClick={() => setIsMenuOpen(false)}>
