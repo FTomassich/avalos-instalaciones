@@ -34,7 +34,7 @@ export function Header() {
               height={85}
               className={`transition-all duration-300 ${ scrolled ? "h-16" : "h-18 sm:h-20" } w-auto`}
             />
-            <div className="flex flex-col items-center leading-tight">
+            <div className="flex flex-col  leading-tight">
               <span
                 className={`transition-all duration-300 font-bold text-gray-900 ${
                   scrolled ? "text-lg sm:text-xl" : "text-xl sm:text-2xl"
@@ -81,32 +81,34 @@ export function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <nav className="py-4 space-y-4 border-t border-border">
-            <Link href="#especialidades" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
-              Especialidades
-            </Link>
-            <Link href="#servicios" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
-              Servicios
-            </Link>
-            <Link href="#nosotros" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
-              Nosotros
-            </Link>
-            <Link href="#catalogo" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
-              Catálogo
-            </Link>
-            <Link href="#blog" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
-              Blog
-            </Link>
-            <Link href="#contacto" onClick={() => setIsMenuOpen(false)}>
-              <Button className="w-full bg-primary hover:bg-primary/90 py-6 mt-2">Contacto</Button>
-            </Link>
-          </nav>
-        </div>
+     
+<div
+  className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+    isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+  } bg-white w-full absolute left-0 right-0`}
+>
+  <nav className="py-4 space-y-4 border-t border-border px-4">
+    <Link href="#especialidades" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
+      Especialidades
+    </Link>
+    <Link href="#servicios" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
+      Servicios
+    </Link>
+    <Link href="#nosotros" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
+      Nosotros
+    </Link>
+    <Link href="#catalogo" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
+      Catálogo
+    </Link>
+    <Link href="#blog" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
+      Blog
+    </Link>
+    <Link href="#contacto" onClick={() => setIsMenuOpen(false)}>
+      <Button className="w-full bg-primary hover:bg-primary/90 py-6 mt-2">Contacto</Button>
+    </Link>
+  </nav>
+</div>
+
       </div>
     </header>
   )
