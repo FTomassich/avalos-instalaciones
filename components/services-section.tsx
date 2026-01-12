@@ -15,7 +15,7 @@ export function ServicesSection() {
         "Materiales certificados IRAM",
         "Mantenimiento preventivo incluido",
       ],
-      image: "/images/whatsapp-20image-202026-01-06-20at-2012.jpeg",
+      image: "/images/servicioAgua.jpeg",
       cta: "Consultar proyecto sanitario",
       href: "#contacto",
     },
@@ -29,7 +29,7 @@ export function ServicesSection() {
         "Pruebas de estanqueidad certificadas",
         "Dirección técnica matriculada",
       ],
-      image: "/images/whatsapp-20image-202026-01-06-20at-2012.jpeg",
+      image: "/images/gas.jpeg",
       cta: "Solicitar evaluación de gas",
       href: "#contacto",
     },
@@ -43,7 +43,7 @@ export function ServicesSection() {
         "Calor homogéneo garantizado",
         "Ahorro energético comprobado",
       ],
-      image: "/images/whatsapp-20image-202026-01-06-20at-2012.jpeg",
+      image: "/images/servicioCalefaccion.jpeg",
       cta: "Diseñar tu sistema de calefacción",
       href: "#contacto",
     },
@@ -65,14 +65,16 @@ export function ServicesSection() {
               key={index}
               className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-10 lg:gap-14 items-center`}
             >
-              <div className="flex-1 relative h-[400px] w-full rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                <Image
-                  src={service.image || "/placeholder.svg"}
-                  alt={service.title}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+             <div className="flex-1 relative w-full min-h-[300px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+  <Image
+    src={service.image || "/placeholder.svg"}
+    alt={service.title}
+    fill
+    sizes="(max-width: 768px) 100vw, 50vw"
+    className="object-cover hover:scale-105 transition-transform duration-500"
+  />
+</div>
+
               <div className="flex-1 space-y-6 px-6 sm:px-8 lg:px-10 text-center lg:text-left">
                 <h3 className="text-3xl md:text-4xl font-bold leading-tight">{service.title}</h3>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">{service.description}</p>
