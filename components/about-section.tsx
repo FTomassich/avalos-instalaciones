@@ -4,9 +4,9 @@ export function AboutSection() {
   return (
     <section id="nosotros" className="py-20 sm:py-28 bg-muted/50 relative overflow-hidden scroll-mt-24">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0 opacity-10">
+      <div className="absolute inset-0 z-0 opacity-17">
         <Image
-          src="/images/whatsapp-20image-202026-01-06-20at-2012.jpeg"
+          src="/images/foto1.jpeg"
           alt="Background"
           fill
           className="object-cover"

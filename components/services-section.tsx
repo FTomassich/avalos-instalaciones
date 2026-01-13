@@ -16,6 +16,8 @@ export function ServicesSection() {
         "Mantenimiento preventivo incluido",
       ],
       image: "/images/servicioAgua.jpeg",
+      fit: "cover",
+      
       cta: "Consultar proyecto sanitario",
       href: "#contacto",
     },
@@ -43,7 +45,8 @@ export function ServicesSection() {
         "Calor homogéneo garantizado",
         "Ahorro energético comprobado",
       ],
-      image: "/images/servicioCalefaccion.jpeg",
+      image: "/images/radiante.jpeg",
+      fit: "cover",
       cta: "Diseñar tu sistema de calefacción",
       href: "#contacto",
     },
@@ -66,13 +69,15 @@ export function ServicesSection() {
               className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-10 lg:gap-14 items-center`}
             >
              <div className="flex-1 relative w-full min-h-[300px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
-  <Image
-    src={service.image || "/placeholder.svg"}
-    alt={service.title}
-    fill
-    sizes="(max-width: 768px) 100vw, 50vw"
-    className="object-cover hover:scale-105 transition-transform duration-500"
-  />
+<Image
+  src={service.image}
+  alt={service.title}
+  fill
+  sizes="(max-width: 768px) 100vw, 50vw"
+  className={`hover:scale-105 transition-transform duration-500 object-${service.fit}`}
+/>
+
+
 </div>
 
               <div className="flex-1 space-y-6 px-6 sm:px-8 lg:px-10 text-center lg:text-left">

@@ -18,7 +18,7 @@ export function SpecialtiesSection() {
       title: "Gas",
       description: "Instalaciones bajo normativa vigente con procesos eficientes",
       details: "Certificación NAG-200 y pruebas de estanqueidad",
-      image: "/images/gas.jpeg", 
+      image: "/images/cañoGas.jpeg", 
       iconColor: "text-white",
     },
     {
@@ -26,7 +26,7 @@ export function SpecialtiesSection() {
       title: "Calefacción",
       description: "Radiadores y piso radiante para calor homogéneo y eficiente",
       details: "Diseño personalizado y máxima eficiencia energética",
-      image: "/images/calefaccion.jpeg", 
+      image: "/images/pisoRadiante.jpeg", 
       iconColor: "white",
     },
   ]
