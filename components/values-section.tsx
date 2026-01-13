@@ -26,7 +26,7 @@ export function ValuesSection() {
             <div className="space-y-4 sm:space-y-6 p-6 sm:p-8 bg-muted/30 rounded-2xl">
               <h3 className="text-2xl sm:text-3xl font-bold text-primary">Misión</h3>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Transformamos cada proyecto en un espacio seguro y confortable, brindando instalaciones técnicas de
+                Transformar cada proyecto en un espacio seguro y confortable, brindando instalaciones técnicas de
                 calidad que perduren en el tiempo y generen tranquilidad en nuestros clientes.
               </p>
             </div>
