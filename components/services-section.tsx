@@ -32,6 +32,7 @@ export function ServicesSection() {
         "Dirección técnica matriculada",
       ],
       image: "/images/gas.jpeg",
+      fit: "cover",
       cta: "Solicitar evaluación de gas",
       href: "#contacto",
     },
