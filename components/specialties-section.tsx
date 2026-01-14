@@ -12,12 +12,11 @@ export function SpecialtiesSection() {
           console.log("Observando:", entry.target, "isIntersecting:", entry.isIntersecting)
           if (entry.isIntersecting) {
             entry.target.classList.add("visible")
-          } else {
-            entry.target.classList.remove("visible")
-          }
+            observer.unobserve(entry.target)
+          } 
         })
       },
-      { threshold: 0.1 } // más sensible
+      { threshold: 0.1 } 
     )
 
     const items = document.querySelectorAll(".animate-fadeUp, .animate-fadeSide")

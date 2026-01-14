@@ -165,9 +165,9 @@ body {
 }
 
 .animate-fadeUp.visible {
-  animation: fadeUp 0.8s ease forwards;
+  animation: fadeUp 1.2s ease forwards;
 }
 
 .animate-fadeSide.visible {
-  animation: fadeSide 0.8s ease forwards;
+  animation: fadeSide 1.5s ease forwards;
 }
