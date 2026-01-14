@@ -58,7 +58,7 @@ export function SpecialtiesSection() {
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 
             className="text-4xl md:text-5xl font-bold mb-5 leading-tight animate-fadeUp"
-            style={{ animationDelay: "0.5s" }}
+            style={{ animationDelay: "0.4s" }}
           >
             ¿En qué nos especializamos?
           </h2>

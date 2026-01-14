@@ -57,7 +57,7 @@ export function ServicesSection() {
     <section id="servicios" className="py-20 bg-background scroll-mt-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-  <h2 className="text-4xl md:text-5xl font-bold mb-5 text-balance leading-tight animate-fadeUp" style={{ animationDelay: "0.5s" }}>
+  <h2 className="text-4xl md:text-5xl font-bold mb-5 text-balance leading-tight animate-fadeUp" style={{ animationDelay: "0.4s" }}>
     Nuestros Servicios
   </h2>
   <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fadeUp" style={{ animationDelay: "0.7s" }}>
