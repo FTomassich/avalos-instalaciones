@@ -171,3 +171,15 @@ body {
 .animate-fadeSide.visible {
   animation: fadeSide 1s ease forwards;
 }
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #6b7280; /* gris */
+  z-index: 9999 !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; /* tamaño de flecha */
+}
