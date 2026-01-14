@@ -99,11 +99,7 @@ export function CatalogSection() {
       .swiper-button-next::after, .swiper-button-prev::after { font-size: 14px !important; } 
       .swiper-button-next { right: -40px !important; } .swiper-button-prev { left: -40px !important; } 
       @media (max-width: 640px) { .swiper-button-next { right: -10px !important; } 
-       .swiper-button-prev { left: -10px !important; } /* Elimina pseudo-elementos de sombra que Swiper agrega */
-  .swiper::before,
-  .swiper::after {
-    display: none !important;
-    content: none !important;} `}</style>
+       .swiper-button-prev { left: -10px !important; } } `}</style>
 
     </section>
   )
