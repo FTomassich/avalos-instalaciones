@@ -13,8 +13,8 @@ import "swiper/css/navigation"
 export function CatalogSection() {
   const products = [
     { title: "Kit de piso radiante", description: "Sistema completo con tubos, aislación y accesorios certificados", image: "/images/kitRadiante.jpeg", price: "Desde $860.000" },
-    { title: "Radiadores modernos", description: "Alta eficiencia térmica y diseño moderno para cualquier ambiente", image: "/images/radiador.jpeg", price: "Desde $345.000" },
-    { title: "Grifería Premium", description: "Componentes de primera calidad para los distintos ambientes de tu casa", image: "/images/griferia2.jpg", price: "Kit desde $390.000" },
+    { title: "Radiadores térmicos", description: "Alta eficiencia y diseño moderno para tus ambiente", image: "/images/radiador.jpeg", price: "Desde $345.000" },
+    { title: "Grifería Premium", description: "Componentes de calidad para los ambientes de tu casa", image: "/images/griferia2.jpg", price: "Kit desde $390.000" },
     { title: "Paneles solares", description: "Componentes de alta calidad bajo normativa vigente", image: "/images/panel.jpg", price: "Desde $370.000" },
     { title: "Accesorios certificados", description: "Componentes de alta calidad bajo normativa vigente", image: "/images/doble.jpeg", price: "Items desde $90.000" },
   ]
