@@ -25,7 +25,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contacto" className="py-20 sm:py-28 bg-muted/50 scroll-mt-24">
+    <section id="contacto" className="py-20 sm:py-28 bg-muted/50 scroll-mt-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">

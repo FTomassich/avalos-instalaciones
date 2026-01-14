@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function AboutSection() {
   return (
-    <section id="nosotros" className="py-20 sm:py-28 bg-muted/50 relative overflow-hidden scroll-mt-24">
+    <section id="nosotros" className="py-20 sm:py-28 bg-muted/50 relative overflow-hidden scroll-mt-0">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 opacity-17">
         <Image

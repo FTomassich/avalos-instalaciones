@@ -25,7 +25,7 @@ export function CatalogSection() {
   ]
 
   return (
-    <section id="catalogo" className="py-20 sm:py-28 bg-background scroll-mt-20">
+    <section id="catalogo" className="py-20 sm:py-28 bg-background scroll-mt-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 sm:mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-balance leading-tight px-2">

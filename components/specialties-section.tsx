@@ -32,7 +32,7 @@ export function SpecialtiesSection() {
   ]
 
   return (
-    <section id="especialidades" className="py-20 bg-muted/50 scroll-mt-24">
+    <section id="especialidades" className="py-20 bg-muted/50 scroll-mt-0">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">

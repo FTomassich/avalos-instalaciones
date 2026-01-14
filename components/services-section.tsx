@@ -46,7 +46,7 @@ export function ServicesSection() {
         "Calor homogéneo garantizado",
         "Ahorro energético comprobado",
       ],
-      image: "/images/radiante.jpeg",
+      image: "/images/foto2.jpeg",
       fit: "cover",
       cta: "Diseñar tu sistema de calefacción",
       href: "#contacto",
@@ -54,7 +54,7 @@ export function ServicesSection() {
   ]
 
   return (
-    <section id="servicios" className="py-20 bg-background scroll-mt-20">
+    <section id="servicios" className="py-20 bg-background scroll-mt-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-5 text-balance leading-tight">Nuestros Servicios</h2>

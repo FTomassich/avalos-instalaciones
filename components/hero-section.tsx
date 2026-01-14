@@ -8,7 +8,7 @@ export function HeroSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/foto2.jpeg"
+          src="/images/radiante.jpeg"
           alt="Industrial Piping System"
           fill
           className="object-cover"

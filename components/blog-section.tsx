@@ -22,7 +22,7 @@ export function BlogSection() {
   ]
 
   return (
-    <section id="blog" className="py-16 sm:py-20 bg-muted/50 scroll-mt-24">
+    <section id="blog" className="py-16 sm:py-20 bg-muted/50 scroll-mt-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-balance px-2">
