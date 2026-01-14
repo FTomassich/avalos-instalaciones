@@ -94,28 +94,12 @@ export function CatalogSection() {
         </div>
       </div>
 
-      <style jsx global>{`
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #6b7280;
-    z-index: 9999 !important;
-    width: 24px !important;
-    height: 24px !important;
-  }
-
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    font-size: 14px !important;
-  }
-
-  .swiper-button-next {
-    right: -40px !important;
-  }
-
-  .swiper-button-prev {
-    left: -40px !important;
-  }
-`}</style>
+       <style jsx global>{` .swiper-button-next, 
+       .swiper-button-prev { color: #6b7280; z-index: 9999 !important; width: 24px !important; height: 24px !important; }
+      .swiper-button-next::after, .swiper-button-prev::after { font-size: 14px !important; } 
+      .swiper-button-next { right: -40px !important; } .swiper-button-prev { left: -40px !important; } 
+      @media (max-width: 640px) { .swiper-button-next { right: -10px !important; } 
+       .swiper-button-prev { left: -10px !important; } } `}</style>
 
     </section>
   )
