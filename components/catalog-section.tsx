@@ -63,7 +63,7 @@ export function CatalogSection() {
                       className="object-contain scale-95 group-hover:scale-100 transition-transform duration-500"
                     />
                   </div>
-                  <CardHeader className="p-3 pb-1">
+                  <CardHeader className="p-2 pb-1">
                     <CardTitle className="text-lg sm:text-xl">{product.title}</CardTitle>
                     <div className="flex gap-1 mt-2 text-yellow-400">
                       {[...Array(5)].map((_, i) => (
@@ -73,7 +73,7 @@ export function CatalogSection() {
                       ))}
                     </div>
                   </CardHeader>
-                  <CardContent className="px-3 pb-2">
+                  <CardContent className="px-2 pb-2">
                     <p className="text-sm text-muted-foreground leading-relaxed">{product.description}</p>
                     <p className="text-base font-bold mt-2 text-foreground">{product.price}</p>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mt-2">
@@ -81,7 +81,7 @@ export function CatalogSection() {
                       <span>Envíos a todo el país</span>
                     </div>
                   </CardContent>
-                  <CardFooter className="p-3 pt-2 flex flex-col gap-2">
+                  <CardFooter className="p-2 pt-2 flex flex-col gap-2">
                     <Button className="w-full bg-[#2d6a4f] hover:bg-[#1b4332] text-white text-sm py-4">Disponible</Button>
                     <Button variant="outline" className="w-full border-[#2d6a4f] text-[#2d6a4f] hover:bg-[#d8f3dc] text-sm py-4 bg-transparent">
                       Pedir cotización
