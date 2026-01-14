@@ -55,7 +55,7 @@ export function CatalogSection() {
             {products.map((product, index) => (
               <SwiperSlide key={index}>
                 <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border border-muted rounded-xl group">
-                  <div className="relative h-52 sm:h-60 w-full overflow-hidden flex items-center justify-center bg-white">
+                  <div className="relative h-40 sm:h-48 w-full overflow-hidden flex items-center justify-center bg-white">
                     <Image
                       src={product.image || "/placeholder.svg"}
                       alt={product.title}
