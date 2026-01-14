@@ -58,12 +58,13 @@ export function SpecialtiesSection() {
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 
             className="text-4xl md:text-5xl font-bold mb-5 leading-tight animate-fadeUp"
+            style={{ animationDelay: "0.5s" }}
           >
             ¿En qué nos especializamos?
           </h2>
           <p 
             className="text-xl md:text-2xl text-muted-foreground leading-relaxed animate-fadeUp" 
-            style={{ animationDelay: "0.4s" }}
+            style={{ animationDelay: "0.7s" }}
           >
             Instalaciones técnicas para obras en construcción y espacios en funcionamiento. Ejecutamos bajo normativa
             vigente y dirección técnica matriculada, con materiales certificados y procesos eficientes.
