@@ -18,10 +18,12 @@ export function WhyChooseSection() {
     <section className="py-20 sm:py-28 bg-muted/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center space-y-8 sm:space-y-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-balance leading-tight px-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-balance leading-tight px-2 animate-fadeUp"
+            style={{ animationDelay: "0.5s" }}>
             ¿Por qué elegir Ávalos Instalaciones?
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto px-2">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto px-2 animate-fadeUp"
+            style={{ animationDelay: "0.7s" }}>
             Con más de 30 años de experiencia, combinamos trayectoria con compromiso genuino hacia la calidad y la
             seguridad. Materiales certificados, normativas vigentes, trato personalizado y asesoramiento constante en
             cada proyecto.

@@ -29,12 +29,10 @@ export function ContactSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-balance leading-tight px-2">
+           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-balance leading-tight px-2 animate-fadeUp" style={{ animationDelay: "0.5s" }} >
               Contacto y presupuestos
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed px-2">
-              Respetamos plazos y trabajamos bajo normativa vigente con dirección técnica matriculada
-            </p>
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed px-2 animate-fadeUp" style={{ animationDelay: "0.7s" }} >Respetamos plazos y trabajamos bajo normativa vigente con dirección técnica matriculada </p>
           </div>
 
           <form

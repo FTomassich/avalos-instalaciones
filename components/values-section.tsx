@@ -19,7 +19,8 @@ export function ValuesSection() {
     <section className="py-20 sm:py-28 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 sm:mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 leading-tight px-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 leading-tight px-2 animate-fadeUp"
+    style={{ animationDelay: "0.5s" }}>
             Misión, Visión y Valores
           </h2>
           <div className="grid md:grid-cols-2 gap-8 sm:gap-16 max-w-6xl mx-auto mb-16 sm:mb-20 text-left">
@@ -40,10 +41,10 @@ export function ValuesSection() {
           </div>
         </div>
 <div className="text-center mb-10">
-  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight px-2">
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight px-2 animate-fadeUp" style={{ animationDelay: "0.5s" }} >
     Valores que nos identifican
   </h2>
-  <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mt-4">
+  <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mt-4 animate-fadeUp" style={{ animationDelay: "0.7s" }} >
     Principios que guían nuestro trabajo y reflejan nuestra identidad
   </p>
 </div>

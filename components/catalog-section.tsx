@@ -28,12 +28,11 @@ export function CatalogSection() {
     <section id="catalogo" className="py-20 sm:py-28 bg-background scroll-mt-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 sm:mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-balance leading-tight px-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-balance leading-tight px-2 animate-fadeUp" style={{ animationDelay: "0.5s" }} >
             Productos y soluciones para tu proyecto
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
-            Materiales certificados y componentes de primera calidad
-          </p>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2 animate-fadeUp" style={{ animationDelay: "0.7s" }} >
+          Meteriales certificados y componentes de primera calidad</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
