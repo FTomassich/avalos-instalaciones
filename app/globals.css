@@ -169,5 +169,5 @@ body {
 }
 
 .animate-fadeSide.visible {
-  animation: fadeSide 1.2s ease forwards;
+  animation: fadeSide 1s ease forwards;
 }
