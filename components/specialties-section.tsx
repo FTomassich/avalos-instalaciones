@@ -78,7 +78,8 @@ export function SpecialtiesSection() {
               <div
                 key={index}
                 className="relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fadeSide"
-                style={{ animationDelay: `${0.6 + index * 0.3}s` }}
+                style={{ animationDelay: `${0.2 + index * 0.15}s` }}
+
               >
                 <Image
                   src={specialty.image}
