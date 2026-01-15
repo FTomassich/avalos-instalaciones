@@ -88,38 +88,41 @@ export function ServicesSection() {
                 />
               </div>
 
-              <div className="flex-1 space-y-6 px-6 sm:px-8 lg:px-10 text-center lg:text-left">
-                <h3 className="text-3xl md:text-4xl font-bold leading-tight">
-                  {service.title}
-                </h3>
+              {/* Bloque textual */}
+              <div className="flex-1 px-6 sm:px-8 lg:px-10">
+                <div className="max-w-md mx-auto lg:mx-0 text-center lg:text-left space-y-6">
+                  <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+                    {service.title}
+                  </h3>
 
-                {/* descripción con ancho limitado en mobile */}
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
-                  {service.description}
-                </p>
+                  {/* descripción con ancho limitado en mobile */}
+                  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
 
-                <ul className="space-y-3 inline-block text-left">
-                  {service.features.map((feature, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center gap-3 text-base text-muted-foreground"
-                    >
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                  <ul className="space-y-3 inline-block text-left">
+                    {service.features.map((feature, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center gap-3 text-base text-muted-foreground"
+                      >
+                        <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                <div className="flex justify-center lg:justify-start">
-                  <Link href={service.href}>
-                    {/* botón centrado en mobile, ancho auto */}
-                    <Button
-                      size="lg"
-                      className="w-auto mx-auto lg:mx-0 bg-primary hover:bg-primary/90 text-lg px-8 py-6 mt-2"
-                    >
-                      {service.cta}
-                    </Button>
-                  </Link>
+                  <div className="flex justify-center lg:justify-start">
+                    <Link href={service.href}>
+                      {/* botón centrado en mobile, ancho auto */}
+                      <Button
+                        size="lg"
+                        className="w-auto mx-auto lg:mx-0 bg-primary hover:bg-primary/90 text-lg px-8 py-6 mt-2"
+                      >
+                        {service.cta}
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
