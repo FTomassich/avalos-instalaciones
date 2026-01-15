@@ -1,13 +1,13 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { ChevronDown } from "lucide-react"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -20,8 +20,17 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log(formData)
+
+    const subject = `Consulta desde la web - ${formData.projectType || "Proyecto"}`
+    const body = `
+Nombre: ${formData.name}
+Email: ${formData.email}
+Teléfono: ${formData.phone}
+Tipo de proyecto: ${formData.projectType}
+Mensaje:
+${formData.message}
+    `
+    window.location.href = `mailto:info@avalosinstalaciones.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
   return (
@@ -29,20 +38,26 @@ export function ContactSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-balance leading-tight px-2 animate-fadeUp" style={{ animationDelay: "0.5s" }} >
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-balance leading-tight px-2 animate-fadeUp"
+              style={{ animationDelay: "0.5s" }}
+            >
               Contacto y presupuestos
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed px-2 animate-fadeUp" style={{ animationDelay: "0.7s" }} >Respetamos plazos y trabajamos bajo normativa vigente con dirección técnica matriculada </p>
+            <p
+              className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed px-2 animate-fadeUp"
+              style={{ animationDelay: "0.7s" }}
+            >
+              Respetamos plazos y trabajamos bajo normativa vigente con dirección técnica matriculada
+            </p>
           </div>
 
           <form
             onSubmit={handleSubmit}
-            className="space-y-6 sm:space-y-8 bg-background p-6 sm:p-10 md:p-12 rounded-2xl shadow-lg"
+            className="space-y-6 sm:space-y-8 bg-background p-6 sm:p-10 md:p-12 rounded-2xl shadow-lg overflow-visible"
           >
             <div className="space-y-3">
-              <Label htmlFor="name" className="text-base">
-                Nombre completo
-              </Label>
+              <Label htmlFor="name" className="text-base">Nombre completo</Label>
               <Input
                 id="name"
                 placeholder="Tu nombre"
@@ -55,9 +70,7 @@ export function ContactSection() {
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-3">
-                <Label htmlFor="email" className="text-base">
-                  Email
-                </Label>
+                <Label htmlFor="email" className="text-base">Email</Label>
                 <Input
                   id="email"
                   type="email"
@@ -70,9 +83,7 @@ export function ContactSection() {
               </div>
 
               <div className="space-y-3">
-                <Label htmlFor="phone" className="text-base">
-                  Teléfono
-                </Label>
+                <Label htmlFor="phone" className="text-base">Teléfono</Label>
                 <Input
                   id="phone"
                   type="tel"
@@ -85,31 +96,32 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div className="space-y-3">
-              <Label htmlFor="projectType" className="text-base">
-                Tipo de proyecto
-              </Label>
-              <Select
+
+            <div className="space-y-3 relative">
+              <Label htmlFor="projectType" className="text-base">Tipo de proyecto</Label>
+              <select
+                id="projectType"
                 value={formData.projectType}
-                onValueChange={(value) => setFormData({ ...formData, projectType: value })}
+                onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
+                required
+                className="w-full h-12 text-base rounded-md border border-input bg-background px-3 pr-8 
+               focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary appearance-none"
               >
-                <SelectTrigger id="projectType" className="w-full h-12 text-base">
-                  <SelectValue placeholder="Selecciona un tipo de proyecto" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="sanitarias">Instalaciones Sanitarias</SelectItem>
-                  <SelectItem value="gas">Instalaciones de Gas</SelectItem>
-                  <SelectItem value="calefaccion">Sistemas de Calefacción</SelectItem>
-                  <SelectItem value="mantenimiento">Mantenimiento</SelectItem>
-                  <SelectItem value="otro">Otro</SelectItem>
-                </SelectContent>
-              </Select>
+                <option value="" disabled>Selecciona un tipo de proyecto</option>
+                <option value="sanitarias">Instalaciones Sanitarias</option>
+                <option value="gas">Instalaciones de Gas</option>
+                <option value="calefaccion">Sistemas de Calefacción</option>
+                <option value="mantenimiento">Mantenimiento</option>
+                <option value="otro">Otro</option>
+              </select>
+
+              {/* Flechita personalizada */}
+              <ChevronDown className="absolute right-3 top-[51px] w-5 h-5 text-muted-foreground pointer-events-none" />
             </div>
 
+
             <div className="space-y-3">
-              <Label htmlFor="message" className="text-base">
-                Mensaje
-              </Label>
+              <Label htmlFor="message" className="text-base">Mensaje</Label>
               <Textarea
                 id="message"
                 placeholder="Contanos sobre tu proyecto..."

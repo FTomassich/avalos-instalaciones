@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Mail, Phone, Instagram } from "lucide-react"
 
 export function Footer() {
   return (
@@ -9,13 +10,38 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4 text-center sm:text-left">
             <Image
-              src="/images/avalos-20instalaciones-01.jpg"
+              src="/images/logo.png"
               alt="Ávalos Instalaciones"
               width={180}
               height={60}
-              className="h-12 w-auto brightness-0 invert"
+              className="h-12 w-auto"
             />
-            <p className="text-sm text-background/80">Instalaciones seguras, soluciones duraderas</p>
+            <p className="text-sm text-background/80">
+              Instalaciones seguras, soluciones duraderas
+            </p>
+
+            {/* Contact info debajo del slogan */}
+            <div className="flex flex-col items-center sm:items-start gap-2 mt-2 text-xs text-background/70">
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <a href="mailto:instalacionessavalos@gmail.com" className="hover:text-background">
+                  instalacionessavalos@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Instagram className="w-4 h-4" />
+                <Link href="https://instagram.com/instalaciones.avalos" target="_blank" className="hover:text-background">
+                  @instalaciones.avalos
+                </Link>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <a href="tel:+5493516458767" className="hover:text-background">
+                  +5493516458767
+                </a>
+              </div>
+              
+            </div>
           </div>
 
           {/* Links */}
@@ -40,6 +66,7 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Empresa */}
           <div className="text-center sm:text-left">
             <h3 className="font-bold mb-4">Empresa</h3>
             <ul className="space-y-2 text-sm">
@@ -66,6 +93,7 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Legal */}
           <div className="text-center sm:text-left">
             <h3 className="font-bold mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
@@ -87,7 +115,9 @@ export function Footer() {
           <p className="text-center text-sm text-background/60">
             © {new Date().getFullYear()} Ávalos Instalaciones. Todos los derechos reservados.
           </p>
-          <p className="text-center font-semibold text-primary">Ejecución profesional. Resultados confiables.</p>
+          <p className="text-center font-semibold text-primary">
+            Ejecución profesional. Resultados confiables.
+          </p>
         </div>
       </div>
     </footer>
