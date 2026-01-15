@@ -32,7 +32,7 @@ export function ServicesSection() {
       ],
       image: "/images/gas.jpeg",
       fit: "cover",
-      cta: "Solicitar evaluación de gas",
+      cta: "Consultar instalación de gas",
       href: "#contacto",
     },
     {
