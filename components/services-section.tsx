@@ -38,7 +38,7 @@ export function ServicesSection() {
     {
       title: "Sistemas de Calefacción",
       description:
-        "Instalación de radiadores tradicionales y sistemas de piso radiante para calor homogéneo y confort térmico.",
+        "Instalación de radiadores tradicionales y sistemas de piso radiante para calor homogéneo y confort térmico. Diseñamos soluciones personalizadas con alta eficiencia energética adaptadas a cada espacio y necesidad.",
       features: [
         "Radiadores de alta eficiencia",
         "Piso radiante personalizado",
