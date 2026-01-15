@@ -96,9 +96,10 @@ export function ServicesSection() {
                   </h3>
 
                   {/* descripción con ancho limitado en mobile */}
-                  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
+                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
+  {service.description}
+</p>
+
 
                   <ul className="space-y-3 inline-block text-left">
                     {service.features.map((feature, idx) => (
