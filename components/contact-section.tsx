@@ -107,7 +107,7 @@ ${formData.message}
                 className="w-full h-12 text-base rounded-md border border-input bg-background px-3 pr-8 
                focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary appearance-none"
               >
-                <option value="" disabled>Selecciona un tipo de proyecto</option>
+                <option value="" disabled>Selecciona un proyecto</option>
                 <option value="sanitarias">Instalaciones Sanitarias</option>
                 <option value="gas">Instalaciones de Gas</option>
                 <option value="calefaccion">Sistemas de Calefacción</option>
