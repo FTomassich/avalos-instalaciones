@@ -47,7 +47,7 @@ export function ServicesSection() {
       ],
       image: "/images/foto2.jpeg",
       fit: "cover",
-      cta: "Diseñar tu sistema de calefacción",
+      cta: "Diseñar tu sistema",
       href: "#contacto",
     },
   ]
