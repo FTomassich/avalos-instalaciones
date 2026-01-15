@@ -6,7 +6,7 @@ export function BlogSection() {
   const posts = [
     {
       title: "Cómo detectar fugas de agua en casa",
-      excerpt: "Aprende a identificar los signos tempranos de fugas de agua y evita daños mayores en tu propiedad.",
+      excerpt: "Aprendé a identificar los signos tempranos de fugas de agua y evitá daños mayores en tu propiedad.",
       date: "Enero 2026",
     },
     {
@@ -16,7 +16,7 @@ export function BlogSection() {
     },
     {
       title: "Seguridad en instalaciones de gas",
-      excerpt: "Todo lo que necesitas saber sobre las normativas y medidas de seguridad en instalaciones de gas.",
+      excerpt: "Todo lo que necesitás saber sobre las normativas y medidas de seguridad en instalaciones de gas.",
       date: "Noviembre 2025",
     },
   ]
