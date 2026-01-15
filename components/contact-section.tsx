@@ -30,7 +30,7 @@ Tipo de proyecto: ${formData.projectType}
 Mensaje:
 ${formData.message}
     `
-    window.location.href = `mailto:info@avalosinstalaciones.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.location.href = `mailto:avalossinstalaciones@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
   return (
