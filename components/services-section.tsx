@@ -25,9 +25,9 @@ export function ServicesSection() {
       description:
         "Instalaciones de gas natural y envasado bajo normativa NAG-200. Utilizamos materiales certificados, realizamos pruebas de estanqueidad y garantizamos procesos eficientes con dirección técnica matriculada para máxima seguridad.",
       features: [
-        "Gas natural y envasado",
-        "Normativa NAG-200 vigente",
-        "Pruebas de estanqueidad certificadas",
+        "Gas natural",
+        "Normativas vigentes",
+        "Pruebas de hermeticidad certificadas",
         "Dirección técnica matriculada",
       ],
       image: "/images/gas.jpeg",
