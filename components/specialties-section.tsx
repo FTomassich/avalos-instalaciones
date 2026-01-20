@@ -38,7 +38,7 @@ export function SpecialtiesSection() {
       icon: Flame,
       title: "Gas",
       description: "Instalaciones bajo normativa vigente con procesos eficientes",
-      details: "Certificación NAG-200 y pruebas de estanqueidad",
+      details: "Certificaciones y pruebas de hermeticidad",
       image: "/images/cañoGas.jpeg", 
       iconColor: "text-white",
     },
