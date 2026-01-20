@@ -4,12 +4,11 @@ import { CheckCircle2 } from "lucide-react"
 
 export function WhyChooseSection() {
   const reasons = [
-    "Más de 30 años de experiencia y trayectoria comprobada",
-    "Materiales certificados bajo normas IRAM y NAG",
+    
+    "Materiales certificados",
     "Dirección técnica matriculada en todas las obras",
     "Atención personalizada y asesoramiento constante",
     "Cumplimiento estricto de normativas vigentes",
-    "Compromiso genuino con la calidad y la seguridad",
     "Respeto por los plazos acordados",
     "Garantía en todos nuestros trabajos",
   ]
@@ -25,8 +24,7 @@ export function WhyChooseSection() {
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto px-2 animate-fadeUp"
             style={{ animationDelay: "0.7s" }}>
             Con más de 30 años de experiencia, combinamos trayectoria con compromiso genuino hacia la calidad y la
-            seguridad. Materiales certificados, normativas vigentes, trato personalizado y asesoramiento constante en
-            cada proyecto.
+            seguridad. 
           </p>
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6 text-left pt-6 sm:pt-8 max-w-4xl mx-auto">
