@@ -8,7 +8,7 @@ export function ServicesSection() {
     {
       title: "Instalaciones Sanitarias",
       description:
-        "Redes completas de agua fría y caliente, desagües cloacales y pluviales. Trabajamos con materiales certificados bajo normas IRAM y realizamos mantenimiento preventivo para garantizar el correcto funcionamiento de todo el sistema.",
+        "Diseñamos y ejecutamos instalaciones integrales de suministro y evacuación, asegurando soluciones confiables para cada proyecto.",
       features: [
         "Redes de agua fría y caliente",
         "Desagües cloacales y pluviales",
@@ -23,7 +23,7 @@ export function ServicesSection() {
     {
       title: "Instalaciones de Gas",
       description:
-        "Instalaciones de gas natural y envasado bajo normativa NAG-200. Utilizamos materiales certificados, realizamos pruebas de estanqueidad y garantizamos procesos eficientes con dirección técnica matriculada para máxima seguridad.",
+        "Desarrollamos sistemas completos de suministro energético, siguiendo estándares de seguridad. Empleamos insumos de calidad y verificamos la integridad de las instalaciones mediante controles especializados.",
       features: [
         "Gas natural",
         "Normativas vigentes",
@@ -38,7 +38,7 @@ export function ServicesSection() {
     {
       title: "Sistemas de Calefacción",
       description:
-        "Instalación de radiadores tradicionales y sistemas de piso radiante para calor homogéneo y confort térmico. Diseñamos soluciones personalizadas con alta eficiencia energética adaptadas a cada espacio y necesidad.",
+        "Diseñamos soluciones personalizadas con alta eficiencia energética adaptadas a cada espacio y necesidad.",
       features: [
         "Radiadores de alta eficiencia",
         "Piso radiante personalizado",
