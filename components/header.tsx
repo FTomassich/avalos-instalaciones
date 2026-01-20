@@ -63,9 +63,7 @@ export function Header() {
             <Link href="#nosotros" className="text-base font-medium hover:text-primary transition-colors">
               Nosotros
             </Link>
-            <Link href="#catalogo" className="text-base font-medium hover:text-primary transition-colors">
-              Catálogo
-            </Link>
+           
             <Link href="#blog" className="text-base font-medium hover:text-primary transition-colors">
               Blog
             </Link>
