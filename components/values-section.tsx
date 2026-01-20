@@ -15,7 +15,7 @@ export function ValuesSection() {
           <div className="space-y-4 sm:space-y-6 p-6 sm:p-8 bg-muted/30 rounded-2xl">
             <h3 className="text-2xl sm:text-3xl font-bold text-primary">Visión</h3>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Ser referencia en las instalaciones de la región, reconocidos por la confianza que generamos, la excelencia en cada proyecto y el trato cercano que ofrecemos a nuestros clientes.
+              Ser referente en instalaciones técnicas, reconocidos por la confianza que generamos, la excelencia en cada proyecto y el trato cercano que ofrecemos a nuestros clientes.
             </p>
           </div>
         </div>
