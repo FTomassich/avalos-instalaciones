@@ -28,9 +28,9 @@ export function SpecialtiesSection() {
   const specialties = [
     {
       icon: Droplet,
-      title: "Agua y cloaca",
+      title: "Agua y Cloaca",
       description: "Redes completas con materiales certificados y mantenimiento profesional",
-      details: "Cumplimiento normativo IRAM y garantía de funcionamiento",
+      details: "Cumplimiento normativo y garantía de funcionamiento",
       image: "/images/agua.jpeg",
       iconColor: "text-white", 
     },
