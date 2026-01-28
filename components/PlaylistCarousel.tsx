@@ -44,7 +44,7 @@ export default function PlaylistCarousel() {
   className="mt-6 mb-12 text-center text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto animate-fadeUp"
   style={{ animationDelay: "0.7s" }}
 >
-  A continuación te mostramos algunos de nuestros proyectos en acción
+  A continuación te mostramos algunos de nuestros proyectos.
 </p>
 
 
