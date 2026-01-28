@@ -32,6 +32,7 @@ const playlists: Playlist[] = [
 
 export default function PlaylistCarousel() {
   const [activePlaylist, setActivePlaylist] = useState<string | null>(null);
+  const [showArrow, setShowArrow] = useState(true);
 
   return (
     <section className="py-20 bg-muted/50 scroll-mt-0">
@@ -41,32 +42,30 @@ export default function PlaylistCarousel() {
         </h2>
 
         <p
-  className="mt-6 mb-12 text-center text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto animate-fadeUp"
-  style={{ animationDelay: "0.7s" }}
->
-  A continuación te mostramos algunos de nuestros proyectos.
-</p>
+          className="mt-6 mb-12 text-center text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto animate-fadeUp"
+          style={{ animationDelay: "0.7s" }}
+        >
+          A continuación te mostramos algunos de nuestros proyectos en acción
+        </p>
 
-
-        {/* Carrusel con paginación */}
         <Swiper
-          
           modules={[Pagination]}
           pagination={{
             clickable: true,
-            el: ".custom-pagination", // usamos el div externo
+            el: ".custom-pagination",
           }}
           breakpoints={{
-  0: {
-    slidesPerView: 1,
-    spaceBetween: 0,
-  },
-  1024: {
-    slidesPerView: 3,
-    spaceBetween: 32,
-  },
-}}
-
+            0: { slidesPerView: 1, spaceBetween: 0 },
+            1024: { slidesPerView: 3, spaceBetween: 32 },
+          }}
+          onReachEnd={() => setShowArrow(false)}
+          onSlideChange={(swiper) => {
+            if (swiper.isEnd) {
+              setShowArrow(false);
+            } else {
+              setShowArrow(true);
+            }
+          }}
         >
           {playlists.map((pl, index) => (
             <SwiperSlide
@@ -93,50 +92,46 @@ export default function PlaylistCarousel() {
           ))}
         </Swiper>
 
-        {/* Bullets debajo del carrusel */}
         <div
           className="custom-pagination flex justify-center mt-6"
-          style={{ textAlign: "center", marginTop: "30px"}}
+          style={{ textAlign: "center", marginTop: "30px" }}
         ></div>
 
-        {/* Flecha animada visible solo en mobile */}
-        <div className="block md:hidden flex justify-center mt-9 text-gray-500">
-          <svg
-            className="w-7 h-7 animate-pulse"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </div>
+        {showArrow && (
+          <div className="block md:hidden flex justify-center mt-9 text-gray-500">
+            <svg
+              className="w-7 h-7 animate-pulse"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        )}
 
-     {activePlaylist && (
-  <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-    <div className="relative max-w-[90%] w-[640px]">
-      {/* Botón de cierre arriba, fuera del iframe */}
-      <button
-        className="absolute -top-12 right-0 text-3xl text-white hover:text-gray-300"
-        onClick={() => setActivePlaylist(null)}
-      >
-        &times;
-      </button>
-      {/* Iframe ocupa todo el ancho */}
-      <iframe
-        width="100%"
-        height="360"
-        src={`https://www.youtube.com/embed/videoseries?list=${activePlaylist}`}
-        title="YouTube playlist"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-        className="rounded"
-      ></iframe>
-    </div>
-  </div>
-)}
-
-
+        {activePlaylist && (
+          <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+            <div className="relative max-w-[90%] w-[640px]">
+              <button
+                className="absolute -top-12 right-0 text-3xl text-white hover:text-gray-300"
+                onClick={() => setActivePlaylist(null)}
+              >
+                &times;
+              </button>
+              <iframe
+                width="100%"
+                height="360"
+                src={`https://www.youtube.com/embed/videoseries?list=${activePlaylist}`}
+                title="YouTube playlist"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="rounded"
+              ></iframe>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
