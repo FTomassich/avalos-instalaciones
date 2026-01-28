@@ -42,13 +42,23 @@ export default function PlaylistCarousel() {
 
         {/* Carrusel con paginación */}
         <Swiper
-          spaceBetween={32}
-          slidesPerView={"auto"}
+          
           modules={[Pagination]}
           pagination={{
             clickable: true,
             el: ".custom-pagination", // usamos el div externo
           }}
+          breakpoints={{
+  0: {
+    slidesPerView: 1,
+    spaceBetween: 0,
+  },
+  1024: {
+    slidesPerView: 3,
+    spaceBetween: 32,
+  },
+}}
+
         >
           {playlists.map((pl, index) => (
             <SwiperSlide
