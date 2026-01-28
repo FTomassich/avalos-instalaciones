@@ -104,30 +104,31 @@ export default function PlaylistCarousel() {
           </svg>
         </div>
 
-        {/* Modal */}
-        {activePlaylist && (
-          <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-            <div className="relative bg-white rounded-lg pt-4 px-8 pb-8 max-w-[90%] w-[640px]">
-              <button
-                className="absolute top-2 right-3 text-2xl text-gray-700 hover:text-black"
-                onClick={() => setActivePlaylist(null)}
-              >
-                &times;
-              </button>
-              <div className="flex justify-center mt-6">
-                <iframe
-                  width="100%"
-                  height="360"
-                  src={`https://www.youtube.com/embed/videoseries?list=${activePlaylist}`}
-                  title="YouTube playlist"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="rounded"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        )}
+     {activePlaylist && (
+  <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+    <div className="relative max-w-[90%] w-[640px]">
+      {/* Botón de cierre arriba, fuera del iframe */}
+      <button
+        className="absolute -top-12 right-0 text-3xl text-white hover:text-gray-300"
+        onClick={() => setActivePlaylist(null)}
+      >
+        &times;
+      </button>
+      {/* Iframe ocupa todo el ancho */}
+      <iframe
+        width="100%"
+        height="360"
+        src={`https://www.youtube.com/embed/videoseries?list=${activePlaylist}`}
+        title="YouTube playlist"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        className="rounded"
+      ></iframe>
+    </div>
+  </div>
+)}
+
+
       </div>
     </section>
   );
