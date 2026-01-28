@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
 import { Play } from "lucide-react";
 
 type Playlist = {
@@ -22,7 +24,7 @@ const playlists: Playlist[] = [
     thumbnail: "https://img.youtube.com/vi/Nh-cEKnEYT4/maxresdefault.jpg",
   },
   {
-    id: "PLt1wQsH7uVVaeMTpjoIZtGI_89p5qd8B3", // repetida por ahora
+    id: "PLt1wQsH7uVVaeMTpjoIZtGI_89p5qd8B3",
     title: "Instalaciones de Gas",
     thumbnail: "https://img.youtube.com/vi/3l5GNqSmtYM/maxresdefault.jpg",
   },
@@ -34,12 +36,20 @@ export default function PlaylistCarousel() {
   return (
     <section className="py-20 bg-muted/50 scroll-mt-0">
       <div className="container mx-auto px-6 lg:px-8">
-        {/* Título principal */}
         <h2 className="text-3xl font-bold text-center mb-10">
           Obras técnicas realizadas
         </h2>
 
-        <Swiper spaceBetween={32} slidesPerView={"auto"}>
+        {/* Carrusel con paginación */}
+        <Swiper
+          spaceBetween={32}
+          slidesPerView={"auto"}
+          modules={[Pagination]}
+          pagination={{
+            clickable: true,
+            el: ".custom-pagination", // usamos el div externo
+          }}
+        >
           {playlists.map((pl, index) => (
             <SwiperSlide
               key={`${pl.id}-${index}`}
@@ -54,12 +64,10 @@ export default function PlaylistCarousel() {
                   alt={pl.title}
                   className="w-full h-44 object-cover"
                 />
-                {/* Ícono de play centrado */}
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                   <Play className="w-12 h-12 text-white drop-shadow-lg" />
                 </div>
-                {/* Subtítulo */}
-                <div className="absolute bottom-0 left-0 right-0 p-3 text-center text-white">
+                <div className="absolute bottom-0 left-0 right-0 p-3 text-center text-white bg-gradient-to-t from-black/50 to-transparent z-10">
                   <h3 className="text-base font-medium">{pl.title}</h3>
                 </div>
               </div>
@@ -67,18 +75,36 @@ export default function PlaylistCarousel() {
           ))}
         </Swiper>
 
+        {/* Bullets debajo del carrusel */}
+        <div
+          className="custom-pagination flex justify-center mt-6"
+          style={{ textAlign: "center", marginTop: "26px"}}
+        ></div>
+
+        {/* Flecha animada visible solo en mobile */}
+        <div className="block md:hidden flex justify-center mt-4 text-gray-500">
+          <svg
+            className="w-7 h-7 animate-pulse"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </div>
+
+        {/* Modal */}
         {activePlaylist && (
           <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-            <div className="relative bg-white rounded-lg p-3 max-w-[90%] w-[640px]">
-              <div className="flex justify-end mb-4">
-                <button
-                  className="text-3xl text-gray-700 hover:text-black"
-                  onClick={() => setActivePlaylist(null)}
-                >
-                  &times;
-                </button>
-              </div>
-              <div className="flex justify-center">
+            <div className="relative bg-white rounded-lg pt-4 px-8 pb-8 max-w-[90%] w-[640px]">
+              <button
+                className="absolute top-2 right-3 text-2xl text-gray-700 hover:text-black"
+                onClick={() => setActivePlaylist(null)}
+              >
+                &times;
+              </button>
+              <div className="flex justify-center mt-6">
                 <iframe
                   width="100%"
                   height="360"
