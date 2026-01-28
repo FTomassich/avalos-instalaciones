@@ -96,9 +96,9 @@ export default function PlaylistCarousel() {
           className="custom-pagination flex justify-center mt-6"
           style={{ textAlign: "center", marginTop: "30px" }}
         ></div>
-
+<div className="block md:hidden flex justify-center mt-9 text-gray-500 h-8">
         {showArrow && (
-          <div className="block md:hidden flex justify-center mt-9 text-gray-500">
+          
             <svg
               className="w-7 h-7 animate-pulse"
               fill="none"
@@ -108,9 +108,9 @@ export default function PlaylistCarousel() {
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </div>
+          
         )}
-
+</div>
         {activePlaylist && (
           <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
             <div className="relative max-w-[90%] w-[640px]">
