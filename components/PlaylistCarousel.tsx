@@ -78,11 +78,11 @@ export default function PlaylistCarousel() {
         {/* Bullets debajo del carrusel */}
         <div
           className="custom-pagination flex justify-center mt-6"
-          style={{ textAlign: "center", marginTop: "26px"}}
+          style={{ textAlign: "center", marginTop: "30px"}}
         ></div>
 
         {/* Flecha animada visible solo en mobile */}
-        <div className="block md:hidden flex justify-center mt-4 text-gray-500">
+        <div className="block md:hidden flex justify-center mt-9 text-gray-500">
           <svg
             className="w-7 h-7 animate-pulse"
             fill="none"
