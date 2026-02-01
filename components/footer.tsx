@@ -24,7 +24,7 @@ export function Footer() {
             <div className="flex flex-col items-center sm:items-start gap-2 mt-2 text-xs text-background/70">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:instalacionessavalos@gmail.com" className="hover:text-background">
+                <a href="mailto:avalos.instalaciones.cba@gmail.com" className="hover:text-background">
                   instalacionessavalos@gmail.com
                 </a>
               </div>
