@@ -64,9 +64,9 @@ export function Header() {
               Nosotros
             </Link>
            
-            <Link href="#blog" className="text-base font-medium hover:text-primary transition-colors">
+            {/* <Link href="#blog" className="text-base font-medium hover:text-primary transition-colors">
               Blog
-            </Link>
+            </Link> */}
             <Link href="#contacto">
               <Button className="bg-primary hover:bg-primary/90 px-8 py-6">Contacto</Button>
             </Link>

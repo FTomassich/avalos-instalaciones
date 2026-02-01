@@ -24,7 +24,7 @@ export default function Home() {
         <PlaylistCarousel/>
         <ValuesSection />
         <WhyChooseSection /> 
-        <BlogSection />
+        {/* <BlogSection /> */}
         <ContactSection />
       </main>
       <Footer />
