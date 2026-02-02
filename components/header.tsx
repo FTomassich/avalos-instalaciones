@@ -96,9 +96,9 @@ export function Header() {
       Nosotros
     </Link>
     
-    <Link href="#blog" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
+    {/* <Link href="#blog" className="block text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
       Blog
-    </Link>
+    </Link> */}
     <Link href="#contacto" onClick={() => setIsMenuOpen(false)}>
       <Button className="w-full bg-primary hover:bg-primary/90 py-6 mt-2">Contacto</Button>
     </Link>
