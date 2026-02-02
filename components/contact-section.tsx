@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { ChevronDown } from "lucide-react"
+import Swal from "sweetalert2"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -20,6 +21,16 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
+    // Mostrar popup de "loading"
+    Swal.fire({
+      title: "Enviando consulta...",
+      text: "Por favor, espera un momento.",
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading()
+      },
+    })
+
     try {
       const response = await fetch(process.env.NEXT_PUBLIC_FORM!, {
         method: "POST",
@@ -28,14 +39,29 @@ export function ContactSection() {
       })
 
       if (response.ok) {
-        alert("Consulta enviada correctamente ✅")
+        Swal.fire({
+          icon: "success",
+          title: "¡Consulta enviada!",
+          text: "Nos pondremos en contacto pronto.",
+          confirmButtonColor: "#3085d6",
+        })
         setFormData({ name: "", email: "", phone: "", projectType: "", message: "" })
       } else {
-        alert("Hubo un error al enviar la consulta ❌")
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Hubo un problema al enviar la consulta.",
+          confirmButtonColor: "#d33",
+        })
       }
     } catch (error) {
       console.error(error)
-      alert("Error de conexión con el servidor ❌")
+      Swal.fire({
+        icon: "error",
+        title: "Error de conexión",
+        text: "No se pudo conectar con el servidor.",
+        confirmButtonColor: "#d33",
+      })
     }
   }
 
