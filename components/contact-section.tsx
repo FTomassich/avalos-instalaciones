@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { ChevronDown } from "lucide-react"
 
 export function ContactSection() {
@@ -18,19 +17,26 @@ export function ContactSection() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    const subject = `Consulta desde la web - ${formData.projectType || "Proyecto"}`
-    const body = `
-Nombre: ${formData.name}
-Email: ${formData.email}
-Teléfono: ${formData.phone}
-Tipo de proyecto: ${formData.projectType}
-Mensaje:
-${formData.message}
-    `
-    window.location.href = `mailto:avalos.instalaciones.cba@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    try {
+      const response = await fetch(process.env.NEXT_PUBLIC_FORM!, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        alert("Consulta enviada correctamente ✅")
+        setFormData({ name: "", email: "", phone: "", projectType: "", message: "" })
+      } else {
+        alert("Hubo un error al enviar la consulta ❌")
+      }
+    } catch (error) {
+      console.error(error)
+      alert("Error de conexión con el servidor ❌")
+    }
   }
 
   return (
@@ -60,6 +66,7 @@ ${formData.message}
               <Label htmlFor="name" className="text-base">Nombre completo</Label>
               <Input
                 id="name"
+                name="name"
                 placeholder="Tu nombre"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -73,6 +80,7 @@ ${formData.message}
                 <Label htmlFor="email" className="text-base">Email</Label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="tu@email.com"
                   value={formData.email}
@@ -86,6 +94,7 @@ ${formData.message}
                 <Label htmlFor="phone" className="text-base">Teléfono</Label>
                 <Input
                   id="phone"
+                  name="phone"
                   type="tel"
                   placeholder="+54 9 11 1234-5678"
                   value={formData.phone}
@@ -96,11 +105,11 @@ ${formData.message}
               </div>
             </div>
 
-
             <div className="space-y-3 relative">
               <Label htmlFor="projectType" className="text-base">Tipo de proyecto</Label>
               <select
                 id="projectType"
+                name="projectType"
                 value={formData.projectType}
                 onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                 required
@@ -115,15 +124,14 @@ ${formData.message}
                 <option value="otro">Otro</option>
               </select>
 
-              {/* Flechita personalizada */}
               <ChevronDown className="absolute right-3 top-[51px] w-5 h-5 text-muted-foreground pointer-events-none" />
             </div>
-
 
             <div className="space-y-3">
               <Label htmlFor="message" className="text-base">Mensaje</Label>
               <Textarea
                 id="message"
+                name="message"
                 placeholder="Contanos sobre tu proyecto..."
                 rows={6}
                 value={formData.message}
