@@ -24,9 +24,9 @@ const playlists: Playlist[] = [
     thumbnail: "https://img.youtube.com/vi/Nh-cEKnEYT4/maxresdefault.jpg",
   },
   {
-    id: "PLt1wQsH7uVVaeMTpjoIZtGI_89p5qd8B3",
+    id: "PLt1wQsH7uVVZ1ebwPVRJsRP4MDikQvlpY",
     title: "Instalaciones de Gas",
-    thumbnail: "https://img.youtube.com/vi/3l5GNqSmtYM/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/W1cTVKRgkFo/maxresdefault.jpg",
   },
 ];
 
