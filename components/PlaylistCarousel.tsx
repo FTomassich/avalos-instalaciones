@@ -94,9 +94,10 @@ export default function PlaylistCarousel() {
 
         <div
           className="custom-pagination flex justify-center mt-6"
-          style={{ textAlign: "center", marginTop: "30px" }}
+          style={{ textAlign: "center", marginTop: "30px"}}
         ></div>
-<div className="block md:hidden flex justify-center mt-9 text-gray-500 h-8">
+
+<div className="block md:hidden flex justify-center mt-9 text-primary h-8">
         {showArrow && (
           
             <svg
@@ -133,6 +134,19 @@ export default function PlaylistCarousel() {
           </div>
         )}
       </div>
+      <style jsx>{`
+  :global(.swiper-pagination-bullet) {
+    background-color: var(--primary) !important;
+    opacity: 0.4;
+    margin: 0 8px !important; 
+  }
+  :global(.swiper-pagination-bullet-active) {
+    background-color: var(--primary) !important;
+    opacity: 1;
+    margin: 0 8px !important; 
+  }
+`}</style>
+
     </section>
   );
 }
