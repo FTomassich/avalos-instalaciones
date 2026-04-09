@@ -29,7 +29,7 @@ export function Footer() {
                 <div className="flex items-center gap-2 justify-center">
                   <Mail className="w-4 h-4" />
                   <a href="mailto:avalos.instalaciones.cba@gmail.com" className="hover:text-background">
-                    instalacionessavalos@gmail.com
+                    avalos.instalaciones.cba@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-2 justify-center">
@@ -40,8 +40,8 @@ export function Footer() {
                 </div>
                 <div className="flex items-center gap-2 justify-center">
                   <Phone className="w-4 h-4" />
-                  <a href="tel:+5493516458767" className="hover:text-background">
-                    +5493516458767
+                  <a href="tel:+5493515333019" className="hover:text-background">
+                    +5493515333019
                   </a>
                 </div>
               </div>
